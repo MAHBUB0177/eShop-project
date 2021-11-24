@@ -1,0 +1,19 @@
+.header{
+  text-align: center;
+
+ }
+ .nav a{
+  
+  text-decoration: none;
+  color: white;
+  margin-right: 40px;
+  margin-left: 20PX;
+  font-size: 20px;
+  float:left;
+ }
+ .nav{
+  background-color: black;
+  height: 40px;
+ 
+  
+ }
