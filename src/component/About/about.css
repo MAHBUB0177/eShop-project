@@ -1,0 +1,17 @@
+.main{
+ margin-top: 70px;
+ display: flex;
+ height: 600px;
+}
+
+.text{
+ width: 40%;
+ /* height: 400px; */
+}
+
+.picture{
+ width: 50%;
+ display: flex;
+ margin-top: 70px;
+ /* height: 400px; */
+}

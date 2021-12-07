@@ -8,7 +8,7 @@ const Cart = () => {
     const initialValue = JSON.parse(saved);
     return initialValue || {};
   });
-  console.log(cart)
+  // console.log(cart)
   let total = 0;
 
 
@@ -30,7 +30,7 @@ const Cart = () => {
     <div>
       <h4 style={{ color: 'blue' }}>Order Detalis</h4>
       <hr />
-      {/* <p>Order Quantity:{cart.length}</p> */}
+      <p>Order Quantity:{cart.length}</p>
       <p>price:{formatNumber(total)}</p>
       <p>Tax:{formatNumber(tax)}</p>
       <Link to="/order">

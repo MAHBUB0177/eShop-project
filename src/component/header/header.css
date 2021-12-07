@@ -1,6 +1,6 @@
 .header{
   text-align: center;
-
+  /* position: fixed; */
  }
  .nav a{
   
@@ -13,7 +13,8 @@
  }
  .nav{
   background-color: black;
-  height: 40px;
+  height: 20px;
  
   
  }
+

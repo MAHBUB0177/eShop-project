@@ -1,9 +1,21 @@
 .footer{
-  margin-top:0px auto;
-  background-color: rgb(111, 101, 121);
+  margin-top:0px auto ;
+  background-color: gainsboro;
+  /* background-color: rgb(111, 101, 121); */
   padding-top: 10px;
-  position: fixed;
+
   bottom: 0%;
+  height: 400PX;
   width: 100%;
 
+}
+
+.middle{
+  margin-top: 60px;
+  display: flex;
+  padding-right: 10px;
+}
+
+.logo-bar{
+  display: block;
 }

@@ -26,18 +26,18 @@ const Product = (props) => {
   return (
     <div className="row" style={{ display: 'inline-block' }}>
       <div className="col-md-3">
-        <Card style={{ marginTop: "10px" }} className="product">
+        <Card style={{ marginTop: "10px",height:'350px'}} className="product">
           <CardImg top src={image} alt="" style={{ height: '100px', width: '200px', textAlign: 'center' }} />
           <CardBody style={{ textAlign: "left" }}>
             <CardTitle style={{ color: 'blue', fontSize: '20px' }}>{title}</CardTitle>
             <hr />
             <CardText>
               {/* <p >{description}</p> */}
-              <p>{category}</p>
+              {/* <p>{category}</p> */}
               <p>Price: {price}/-</p>
               <Link to="/details">
                 <button style={{ marginRight: '5px' }} className="btn btn-primary btn-sm" onClick={() => handelProduct(props.product) }>Details</button></Link>
-              <button className="btn btn-danger btn-sm" onClick={() => countProduct(props.product)}><FontAwesomeIcon icon={faCoffee} />Add to Cart</button>
+              <button className="btn btn-danger btn-sm" onClick={() => countProduct(props.product)}><i class="fas fa-shopping-cart"></i>Add to Cart</button>
               {/* <button onClick={loading}>click</button> */}
             </CardText>
             <hr />

@@ -9,24 +9,21 @@ const ProductDetails = () => {
   // console.log(detailsProduct)
   return (
     <div className="details">
-      <div className="detailsshop">
+      <div className="detailshop">
         
-<Spinner>
+{/* <Spinner>
   Loading...
-</Spinner>
-        <Card style={{ marginTop: "10px" }} className="productdetails">
-          <CardImg top src={detailsProduct.image} alt="" style={{ height: '120px', width: '200px', paddingTop: '2px', float: 'right' }} />
+</Spinner> */}
+        <Card style={{ marginTop: "10px",marginBottom:'10px',marginLeft:'10Px' }} >
+          <CardImg top src={detailsProduct.image} alt="" style={{ height: '300px', width: '400px', paddingTop: '2px',  }} />
           <CardBody style={{ textAlign: "left" }}>
-            <CardTitle style={{ color: 'blue', fontSize: '20px' }}>{detailsProduct.title}</CardTitle>
+            <CardTitle style={{ color: 'blue', fontSize: '20px'}}>{detailsProduct.title}</CardTitle>
             <hr />
             <CardText>
-              {/* <h4>Rate:{detailsProduct.rating.rate}</h4> */}
-              <p style={{ fontWeight: 'bolder', fontSize: '20px' }}>{detailsProduct.category}</p>
-              <p style={{ color: 'blue', fontSize: '20px' }}>{detailsProduct.description}</p>
-              <p>{detailsProduct.category}</p>
+              <h4>Rating:{detailsProduct.rating.rate}</h4>
               <p style={{ fontWeight: 'bolder', fontSize: '20px' }}>Price: {detailsProduct.price}/-</p>
-
-              <button className="btn btn-danger btn-sm" >Add to Cart</button>
+              <p style={{ fontWeight: 'bolder', fontSize: '20px',color:'tomato' }}>category: {detailsProduct.category}</p>
+              <p style={{ color: 'blue', fontSize: '20px' }}>{detailsProduct.description}</p>
             </CardText>
 
 
@@ -34,9 +31,9 @@ const ProductDetails = () => {
         </Card>
       </div>
 
-      <div>
+      {/* <div>
         <Cart />
-      </div>
+      </div> */}
 
 
 

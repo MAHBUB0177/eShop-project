@@ -20,22 +20,32 @@ import Contact from './component/Contact/Contact'
 import LogIn from './component/LogIn/LogIn'
 import About from './component/About/About';
 import Order from './component/Order/Order';
+import Layout from './component/Layout';
+// import PrivateRoute from './component/Inventory/Inventory';
+
+
+// import PrivateRoute from 'routes/PrivateRoute'; 
+
 export const ProductContext = createContext();
 function App() {
   const [detailsProduct, setdetailsProduct] = useState([]);
   return (
+    
     < ProductContext.Provider value={[detailsProduct, setdetailsProduct]}>
 
 
-      <Header />
-      <Navbar1 />
+     
+      
 
-
-      <h1 style={{ color: 'blue', textAlign: 'center' }}>Welcome To Our eShop...</h1>
+    
+      
+      <Layout>
+      {/* <Navbar1 /> */}
+      {/* <h4 style={{ color: 'blue', textAlign: 'center' }}>Welcome To Our eShop...</h4>
 
       <p style={{ backgroundColor: 'blue' }}>
         <hr></hr>
-      </p>
+      </p> */}
       <Routes>
         
 
@@ -45,15 +55,18 @@ function App() {
         <Route path="/login" element={<LogIn />} />
         <Route path="/about" element={<About />} />
         <Route path="/order" element={<Order />}/>
-
-
+        {/* <PrivateRoute path="/inventory" element={<PrivateRoute/>}/> */}
         <Route path="/contact" element={<Contact />} />
 
       </Routes>
-      <Footer />
+      </Layout>
+    
+     
 
     </ProductContext.Provider>
+  
   );
+  
 
 }
 

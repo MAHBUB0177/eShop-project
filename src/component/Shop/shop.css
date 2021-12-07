@@ -1,11 +1,40 @@
 .shop-container{
   display: flex;
+  
 }
 
 .product-container{
   width: 75%;
-    height: 500px;
+    height: auto;
     margin-right: 10px;
-    border-right: 1px solid gray;
+    /* border-right: 1px solid gray; */
     padding-right: 10px;
+}
+
+.carousel{
+
+  height: 230px;
+  background-color: burlywood;
+ 
+
+}
+
+
+.slider-style{
+  margin-top: 10px;
+  display: flex;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  height: 230px;
+
+
+}
+
+.carousel{
+  width: 800px;
+  margin-right: 20px;
+  
+}
+.modal{
+  width: 20px;
 }
