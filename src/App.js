@@ -26,12 +26,16 @@ import Layout from './component/Layout';
 
 // import PrivateRoute from 'routes/PrivateRoute'; 
 
-export const ProductContext = createContext();
+// export const ProductContext = createContext();
+
+
+export const UserContext=createContext() 
 function App() {
-  const [detailsProduct, setdetailsProduct] = useState([]);
+  // const [detailsProduct, setdetailsProduct] = useState([]);
+  const [logedInUser, setLogedInUser]=useState([]);
   return (
     
-    < ProductContext.Provider value={[detailsProduct, setdetailsProduct]}>
+    < UserContext.Provider value={[logedInUser, setLogedInUser]}>
 
 
      
@@ -63,7 +67,7 @@ function App() {
     
      
 
-    </ProductContext.Provider>
+    </UserContext.Provider>
   
   );
   

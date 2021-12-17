@@ -31,9 +31,9 @@ const Header = () => {
               >
                   
                 <Nav.Link style={styling} active href="/shop">Shop</Nav.Link>
-                <Nav.Link style={styling} active href="/order">Order</Nav.Link>
+                {/* <Nav.Link style={styling} active href="/order">Order</Nav.Link> */}
                 {/* <Nav.Link style={styling} active href="/review">Review</Nav.Link> */}
-                <Nav.Link style={styling} active href="/inventory">Inventory</Nav.Link>
+                {/* <Nav.Link style={styling} active href="/inventory">Inventory</Nav.Link> */}
                 <Nav.Link style={styling} active href="/contact">Contact</Nav.Link>
                 <Nav.Link style={styling} active href="/login"><i class="fas fa-user-circle"></i>Login</Nav.Link>
 

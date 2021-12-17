@@ -31,7 +31,7 @@ handelInput=(event)=>{
 handelSubmit=(event)=>{
  event.preventDefault()
  console.log(this.state)
-//  document.getElementById('former_id').request();
+ document.getElementById('former_id').reset();
 
 }
 

@@ -20,7 +20,8 @@ const About = () => {
 
      <div className="main">
        <div className="text">
-      <h1>Welcome To Our eShop</h1>
+      <h1 style={{color:'rgb(168,124,167)'}}>Welcome To Our eShop</h1>
+      {/* <hr/> */}
       <p>Holisticly seize parallel metrics and functional ROI. Seamlessly revolutionize error-free internal or "organic" sources before effective scenarios. Progressively incentivize state of the art applications for efficient intellectual capital. Credibly leverage existing distinctive mindshare through cutting-edge schemas. Proactively procrastinate team building paradigms coordinate client-centric total transparent internal.
       </p>
       <p>

@@ -1,39 +1,63 @@
-import React, { useContext } from 'react';
-import { Card, CardImg, CardBody, CardTitle, CardText, Button, CardSubtitle, CardGroup ,Spinner} from 'reactstrap';
-import { ProductContext } from '../../App';
-import Cart from '../Cart/Cart';
+import React, {  useEffect, useState } from 'react';
+import { Card, CardImg, CardBody, CardTitle, CardText } from 'reactstrap';
+import Product from '../Propduct/Product';
 import './productdetails.css'
+
 const ProductDetails = () => {
 
-  const [detailsProduct, setdetailsProduct] = useContext(ProductContext);
-  // console.log(detailsProduct)
+  const [product, setProduct] = useState()
+  const[productDetails,setProductDetails]=useState({})
+  // console.log(productDetails)
+
+console.log(product)
+  useEffect(() => {
+    fetch('https://fakestoreapi.com/products')
+      .then(res => res.json())
+      .then(data => {
+        console.log(data)
+        setProduct(data)
+      })
+
+  }, []);
+
+  const handelProduct = (productall) => {
+    console.log(product)
+    setProductDetails(productall)
+  }
+ 
+
+
+
   return (
     <div className="details">
-      <div className="detailshop">
-        
-{/* <Spinner>
-  Loading...
-</Spinner> */}
-        <Card style={{ marginTop: "10px",marginBottom:'10px',marginLeft:'10Px' }} >
-          <CardImg top src={detailsProduct.image} alt="" style={{ height: '300px', width: '400px', paddingTop: '2px',  }} />
+      <Product handelProduct={handelProduct}
+      product={product} />
+
+     
+     
+   {/* <Card style={{ marginTop: "10px",marginLeft:'20px',marginBottom:'20px' }} className="details1">
+          <CardImg top src={image} alt="" style={{ height: '120px', width: '200px', paddingTop: '2px', float: 'right' }} />
           <CardBody style={{ textAlign: "left" }}>
-            <CardTitle style={{ color: 'blue', fontSize: '20px'}}>{detailsProduct.title}</CardTitle>
-            <hr />
+            <CardTitle style={{ color: 'blue', fontSize: '20px' }}>{title}</CardTitle>
+            <hr /> 
             <CardText>
-              <h4>Rating:{detailsProduct.rating.rate}</h4>
-              <p style={{ fontWeight: 'bolder', fontSize: '20px' }}>Price: {detailsProduct.price}/-</p>
-              <p style={{ fontWeight: 'bolder', fontSize: '20px',color:'tomato' }}>category: {detailsProduct.category}</p>
-              <p style={{ color: 'blue', fontSize: '20px' }}>{detailsProduct.description}</p>
+              <p >{description}</p>
+              <p style={{ color: 'blue', fontSize: '20px' }}>{description}</p>
+               
+              <p style={{ fontWeight: 'bolder', fontSize: '15px' }}>Price: {}/-</p> 
+
+              
             </CardText>
 
 
-          </CardBody>
-        </Card>
-      </div>
+         </CardBody>
+        </Card>  */}
 
-      {/* <div>
-        <Cart />
-      </div> */}
+
+
+
+
+
 
 
 

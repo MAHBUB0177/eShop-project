@@ -13,14 +13,16 @@ import  shoping4  from '../images/shoping4.jpg';
 import  shoping3  from '../images/shoping3.jpg';
 import shoping1 from '../images/shoping1.jpg'
 
+
 const Shop = () => {
   <h1>shoop...........</h1>
   const [product, setProduct] = useState([]);
   const [cart, setCart] = useState([])
-  const [detailsProduct, setdetailsProduct] = useContext(ProductContext);
+  // const [detailsProduct, setdetailsProduct] = useContext(ProductContext);
 
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
+    // fetch('https://foodbukka.herokuapp.com/api/v1/menu')
       .then(res => res.json())
       .then(data => {
         // console.log(data)
@@ -29,9 +31,9 @@ const Shop = () => {
     localStorage.setItem("cart", JSON.stringify(cart))
   }, [cart]);
   console.log(cart.length)
-  const handelProduct = (product) => {
-    setdetailsProduct(product)
-  }
+  // const handelProduct = (product) => {
+  //   // setdetailsProduct(product)
+  // }
   const countProduct = (product) => {
     const newCart = [...cart, product];
     setCart(newCart)
@@ -114,7 +116,7 @@ const Shop = () => {
           {
             product.map(pd => <Product product={pd}
               key={pd.key}
-              handelProduct={handelProduct}
+              // handelProduct={handelProduct}
               countProduct={countProduct}
             />)
           }

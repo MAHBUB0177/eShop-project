@@ -20,9 +20,10 @@ const Product = (props) => {
  
 
 
-  const handelProduct = props.handelProduct;
+  
   const countProduct = props.countProduct;
-  const { title, price, description, category, image } = props.product;
+  const { title, price, image } = props.product;
+  const handelProduct = props.handelProduct;
   return (
     <div className="row" style={{ display: 'inline-block' }}>
       <div className="col-md-3">
@@ -36,7 +37,7 @@ const Product = (props) => {
               {/* <p>{category}</p> */}
               <p>Price: {price}/-</p>
               <Link to="/details">
-                <button style={{ marginRight: '5px' }} className="btn btn-primary btn-sm" onClick={() => handelProduct(props.product) }>Details</button></Link>
+                <button style={{ marginRight: '5px' }} className="btn btn-primary btn-sm" onClick={() => handelProduct(props.product)} >Details</button></Link>
               <button className="btn btn-danger btn-sm" onClick={() => countProduct(props.product)}><i class="fas fa-shopping-cart"></i>Add to Cart</button>
               {/* <button onClick={loading}>click</button> */}
             </CardText>

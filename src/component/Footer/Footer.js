@@ -2,26 +2,24 @@
 import React from 'react';
 
 import instagram from '../images/site.png'
-import insta from '../images/insta.jpg'
+// import insta from '../images/insta.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faCoffee, } from '@fortawesome/free-sopd-svg-icons'
 
 import './footer.css'
-// import { pnk } from 'react-router-dom';
+import facebook from '../images/fb.jpg'
+import insta from '../images/insta1.jpg'
+// import twiteer from '../images/twitter1.jpg'
+import twiteer from '../images/twiteer1.jpg'
+import whatsapp from '../images/whatsapp .jpg'
 
 const Footer = () => {
-  // var fotbar = {
-  //   marginTop: '25px',
-  //   pstStyletype: 'none',
-
-
-
-  // }
 
   var logo_img = {
-    width: '300px',
-    height: '60px'
+    width: '50px',
+    height: '40px'
   }
+
   return (
     <div className="footer" >
 
@@ -33,11 +31,12 @@ const Footer = () => {
             necessary product from our KachaBazar shop and get some special offer.</p>
           <div style={{ paddingTop: '5px' }}>
             <p>Follow Us</p>
-            <div className="logo-bar">
-              {/* <p> <pnk to=""> <img style={logo_img} src={instagram} alt="" ></img></pnk></p> */}
-              <p> <a href="https://www.facebook.com/"> <img style={logo_img} src={insta} alt="" ></img></a></p>
-
-              {/* <p style={{ width: '30px', height: '20px' }}><i class="fab fa-facebook"></i> </p> */}
+            <div className="logo-bar" >
+              <p> <a href="https://www.instagram.com/"> <img style={logo_img} src={insta} alt="" >
+              </img></a> <a href="https://www.facebook.com/"> <img style={logo_img} src={facebook} alt=''/> </a>
+              <a href="https://twitter.com/login?lang=en"> <img style={logo_img} src={twiteer} alt=''/> </a>
+              <a href="https://www.whatsapp.com/"> <img style={logo_img} src={whatsapp} alt=''/> </a></p>
+              
             </div>
 
           </div>
